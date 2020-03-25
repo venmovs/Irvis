@@ -3,12 +3,17 @@ import modals from "./modules/modals";
 import tabs from "./modules/tabs";
 import forms from "./modules/forms";
 import changeModalState from "./modules/changModalState";
+import timer from "./modules/timer";
 
 
 window.addEventListener('DOMContentLoaded', () => {
 
    let modalState = {};
+   let deadline = "2020-04-24"
+
+
    changeModalState(modalState);
+   timer(".container1", deadline);
    modals();
    tabs('.glazing_slider ', '.glazing_block', '.glazing_content', 'active');
    tabs('.decoration_slider', '.no_click', '.decoration_content > div > div', 'after_click');
